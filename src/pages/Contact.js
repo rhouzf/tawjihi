@@ -39,22 +39,30 @@ const Contact = () => {
       <div className="contact-content">
         <div className="contact-info">
           <div className="info-item">
-            <h3>Email</h3>
-            <p>contact@tawjihibot.com</p>
+            <div className="info-icon"><i className="fas fa-envelope"></i></div>
+            <div>
+              <h3>Email</h3>
+              <p>contact@tawjihibot.com</p>
+            </div>
           </div>
           <div className="info-item">
-            <h3>Téléphone</h3>
-            <p>+212 5XX-XXXXXX</p>
+            <div className="info-icon"><i className="fas fa-phone"></i></div>
+            <div>
+              <h3>Téléphone</h3>
+              <p>+212 5XX-XXXXXX</p>
+            </div>
           </div>
           <div className="info-item">
-            <h3>Adresse</h3>
-            <p>123 Rue de l'Éducation, Rabat, Maroc</p>
+            <div className="info-icon"><i className="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h3>Adresse</h3>
+              <p>123 Rue de l'Éducation, Rabat, Maroc</p>
+            </div>
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="contact-form">
-          <div className="form-group">
-            <label htmlFor="name">Nom complet</label>
+        <form onSubmit={handleSubmit} className="contact-form modern-form">
+          <div className="form-group floating-label">
             <input
               type="text"
               id="name"
@@ -62,11 +70,12 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               required
+              placeholder=" "
             />
+            <label htmlFor="name">Nom complet</label>
           </div>
 
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
+          <div className="form-group floating-label">
             <input
               type="email"
               id="email"
@@ -74,11 +83,12 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               required
+              placeholder=" "
             />
+            <label htmlFor="email">Email</label>
           </div>
 
-          <div className="form-group">
-            <label htmlFor="subject">Sujet</label>
+          <div className="form-group floating-label">
             <input
               type="text"
               id="subject"
@@ -86,11 +96,12 @@ const Contact = () => {
               value={formData.subject}
               onChange={handleChange}
               required
+              placeholder=" "
             />
+            <label htmlFor="subject">Sujet</label>
           </div>
 
-          <div className="form-group">
-            <label htmlFor="message">Message</label>
+          <div className="form-group floating-label">
             <textarea
               id="message"
               name="message"
@@ -98,11 +109,13 @@ const Contact = () => {
               onChange={handleChange}
               required
               rows="5"
+              placeholder=" "
             ></textarea>
+            <label htmlFor="message">Message</label>
           </div>
 
-          <button type="submit" className="submit-button">
-            Envoyer le message
+          <button type="submit" className="submit-button modern-btn">
+            <i className="fas fa-paper-plane"></i> Envoyer le message
           </button>
         </form>
       </div>

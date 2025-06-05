@@ -4,6 +4,7 @@ import '../styles/Chatbot.css';
 const Chatbot = () => {
   const [messages, setMessages] = useState([]);
   const [inputMessage, setInputMessage] = useState('');
+  const [searchType, setSearchType] = useState('ecole');
 
   const handleSendMessage = (e) => {
     e.preventDefault();
@@ -31,7 +32,7 @@ const Chatbot = () => {
   };
 
   return (
-    <div className="chatbot-container">
+    <div className="chatbot-container modern-chatbot">
       <div className="chat-header">
         <h2>TawjihiBot Assistant</h2>
         <p>Posez vos questions sur l'orientation scolaire</p>
@@ -41,7 +42,7 @@ const Chatbot = () => {
         {messages.map((message, index) => (
           <div
             key={index}
-            className={`message ${message.sender === 'user' ? 'user-message' : 'bot-message'}`}
+            className={`message-bubble ${message.sender === 'user' ? 'user-message' : 'bot-message'}`}
           >
             <div className="message-content">
               <p>{message.text}</p>
@@ -52,6 +53,16 @@ const Chatbot = () => {
       </div>
 
       <form onSubmit={handleSendMessage} className="chat-input-form">
+        <select
+          className="chat-select"
+          value={searchType}
+          onChange={e => setSearchType(e.target.value)}
+        >
+          <option value="ecole">Recherche par école</option>
+          <option value="ecole_filiere">Recherche par école et filière</option>
+          <option value="limite">Recherche par limite</option>
+          <option value="conseil">Conseil</option>
+        </select>
         <input
           type="text"
           value={inputMessage}
@@ -59,8 +70,8 @@ const Chatbot = () => {
           placeholder="Posez votre question..."
           className="chat-input"
         />
-        <button type="submit" className="send-button">
-          Envoyer
+        <button type="submit" className="send-button modern-btn">
+          <i className="fas fa-paper-plane"></i> Envoyer
         </button>
       </form>
     </div>

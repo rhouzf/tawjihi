@@ -8,108 +8,90 @@ const Home = () => {
       <section className="hero-section">
         <div className="hero-content">
           <h1>Bienvenue sur TawjihiBot</h1>
-          <p>Votre guide intelligent pour l'orientation scolaire et professionnelle</p>
+          <p className="hero-subtitle">Votre guide intelligent pour l'orientation universitaire</p>
           <div className="hero-buttons">
-            <Link to="/create-account" className="cta-button primary">
-              Créer un compte
-            </Link>
+            <Link to="/create-account" className="cta-button primary">Commencer</Link>
+            <Link to="/about" className="cta-button secondary">En savoir plus</Link>
           </div>
-        </div>
-        <div className="hero-stats">
-          <div className="stat-item">
-            <span className="stat-number">10K+</span>
-            <span className="stat-label">Étudiants</span>
-          </div>
-          <div className="stat-item">
-            <span className="stat-number">500+</span>
-            <span className="stat-label">Écoles</span>
-          </div>
-          <div className="stat-item">
-            <span className="stat-number">95%</span>
-            <span className="stat-label">Satisfaction</span>
-          </div>
-        </div>
-      </section>
-
-      <section className="features-section">
-        <h2 className="section-title">Nos Services</h2>
-        <div className="features-grid">
-          <div className="feature-card">
-            <div className="feature-icon">🎯</div>
-            <h3>Orientation Personnalisée</h3>
-            <p>Découvrez les filières qui correspondent à vos compétences et aspirations grâce à notre système d'orientation intelligent.</p>
-            <p>Posez vos questions et obtenez des réponses instantanées sur les différentes filières et opportunités d'études.</p>
-            <Link to="/chatbot" className="feature-link">Tester le chatbot →</Link>
-          </div>
-          <div className="feature-card">
-            <div className="feature-icon">📚</div>
-            <h3>Inscription aux Écoles</h3>
-            <p>Accédez facilement aux inscriptions dans les établissements de votre choix et suivez votre dossier en temps réel.</p>
-            <Link to="/inscription" className="feature-link">Voir les écoles →</Link>
+          <div className="hero-features">
+            <div className="feature-card">
+              <i className="fas fa-graduation-cap"></i>
+              <h3>Orientation Intelligente</h3>
+              <p>Découvrez les meilleures options selon votre profil</p>
+            </div>
+            <div className="feature-card">
+              <i className="fas fa-university"></i>
+              <h3>Écoles Prestigieuses</h3>
+              <p>Accédez aux meilleures écoles d'ingénierie et de commerce</p>
+            </div>
+            <div className="feature-card">
+              <i className="fas fa-robot"></i>
+              <h3>Assistance IA</h3>
+              <p>Bénéficiez d'un accompagnement personnalisé</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="how-it-works">
-        <h2 className="section-title">Comment ça marche ?</h2>
-        <div className="steps-container">
+      <section className="schools-section">
+        <h2>Nos Établissements d'Excellence</h2>
+        <p className="section-description">
+          Découvrez nos établissements partenaires qui offrent des formations de qualité et des opportunités uniques pour votre avenir professionnel.
+        </p>
+        <div className="schools-grid">
+          <div className="school-card">
+            <h3>Institut Supérieur de Commerce et d'Administration des Entreprises</h3>
+            <p>ISCAE</p>
+            <p className="school-description">
+              Une institution prestigieuse offrant des formations en commerce et administration des entreprises, reconnue pour son excellence académique.
+            </p>
+            <a href="#" className="school-link">En savoir plus</a>
+          </div>
+          <div className="school-card">
+            <h3>École Nationale de Commerce et de Gestion</h3>
+            <p>ENCG</p>
+            <p className="school-description">
+              Une école de référence dans le domaine du commerce et de la gestion, préparant les futurs leaders du monde des affaires.
+            </p>
+            <a href="#" className="school-link">En savoir plus</a>
+          </div>
+          <div className="school-card">
+            <h3>École Nationale Supérieure d'Informatique et d'Analyse des Systèmes</h3>
+            <p>ENSIAS</p>
+            <p className="school-description">
+              Une institution d'excellence dans le domaine des technologies de l'information et des systèmes d'information.
+            </p>
+            <a href="#" className="school-link">En savoir plus</a>
+          </div>
+        </div>
+      </section>
+
+      <section className="process-section">
+        <h2>Comment ça marche ?</h2>
+        <div className="process-steps">
           <div className="step">
             <div className="step-number">1</div>
-            <h3>Créez votre compte</h3>
-            <p>Inscrivez-vous gratuitement pour accéder à toutes nos fonctionnalités et commencer votre parcours d'orientation</p>
+            <h3>Créez votre profil</h3>
+            <p>Inscrivez-vous et renseignez vos informations</p>
           </div>
           <div className="step">
             <div className="step-number">2</div>
-            <h3>Explorez les filières</h3>
-            <p>Utilisez notre chatbot pour découvrir les différentes options qui correspondent à votre profil et vos aspirations</p>
+            <h3>Choisissez vos écoles</h3>
+            <p>Sélectionnez les établissements qui vous intéressent</p>
           </div>
           <div className="step">
             <div className="step-number">3</div>
-            <h3>Inscrivez-vous</h3>
-            <p>Choisissez votre école parmi notre large sélection et complétez votre inscription en ligne en quelques clics</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="testimonials">
-        <h2 className="section-title">Ce que disent nos utilisateurs</h2>
-        <div className="testimonials-grid">
-          <div className="testimonial-card">
-            <p className="testimonial-text">"TawjihiBot m'a aidé à trouver la filière parfaite pour mes études. Le chatbot est vraiment utile !"</p>
-            <div className="testimonial-author">
-              <span className="author-name">Sarah M.</span>
-              <span className="author-title">Étudiante en Informatique</span>
-            </div>
-          </div>
-          <div className="testimonial-card">
-            <p className="testimonial-text">"L'inscription en ligne est très simple et rapide. Je recommande vivement !"</p>
-            <div className="testimonial-author">
-              <span className="author-name">Mohammed K.</span>
-              <span className="author-title">Étudiant en Commerce</span>
-            </div>
-          </div>
-          <div className="testimonial-card">
-            <p className="testimonial-text">"Un excellent outil pour l'orientation. Les conseils sont pertinents et personnalisés."</p>
-            <div className="testimonial-author">
-              <span className="author-name">Layla B.</span>
-              <span className="author-title">Étudiante en Médecine</span>
-            </div>
+            <h3>Soumettez votre dossier</h3>
+            <p>Envoyez vos documents et attendez la réponse</p>
           </div>
         </div>
       </section>
 
       <section className="cta-section">
         <div className="cta-content">
-          <h2>Prêt à commencer votre parcours ?</h2>
+          <h2>Prêt à commencer votre aventure ?</h2>
           <p>Rejoignez des milliers d'étudiants qui ont déjà trouvé leur voie</p>
-          <div className="cta-buttons">
-            <Link to="/inscription" className="cta-button primary">
-              Commencer maintenant
-            </Link>
-            <Link to="/contact" className="cta-button secondary">
-              Nous contacter
-            </Link>
-          </div>
+          <Link to="/create-account" className="cta-button primary">S'inscrire maintenant</Link>
         </div>
       </section>
     </div>
